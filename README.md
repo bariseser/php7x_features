@@ -3,8 +3,35 @@ This List just listed new features for PHP 7.x version.
 
 ## PHP 7.0
 ##### [Scalar type declarations](http://php.net/manual/tr/migration70.new-features.php#migration70.new-features.scalar-type-declarations)
+```php
+    // Coercive Mode: Defaul mode
+    
+    function sumOfInts(int ...$ints)
+    {
+        return array_sum($ints);
+    }
+    
+    // Strict Mode: 
+    
+    declare(strict_types=1);
+    function sum(int ...$ints) {
+        return array_sum($ints);
+    }
+```
+
 ##### [Return type declarations](http://php.net/manual/tr/migration70.new-features.php#migration70.new-features.return-type-declarations)
+```php
+    function sum($a, $b) : int 
+    {
+        return $a + $b;
+    }
+```
+
 ##### [Null coalescing operator](http://php.net/manual/tr/migration70.new-features.php#migration70.new-features.null-coalesce-op)
+```php
+    $rememberMe = $_POST['remember'] ?? '0';
+```
+
 ##### [Spaceship operator](http://php.net/manual/tr/migration70.new-features.php#migration70.new-features.spaceship-op)
 ##### [Constant arrays using define()](http://php.net/manual/tr/migration70.new-features.php#migration70.new-features.define-array)
 ##### [Anonymous classes](http://php.net/manual/tr/migration70.new-features.php#migration70.new-features.anonymous-classes)
